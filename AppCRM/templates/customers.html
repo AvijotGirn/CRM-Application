@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Customers{% endblock %}
+{% block content %}
+<ul>
+    {% for cust in cust_list %}
+    <li>
+        {{ cust.first_name }} {{ cust.last_name }} | {{ cust.email }} | {{ cust.phone }} | {{ cust.company }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

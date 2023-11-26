@@ -6,3 +6,4 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("customers/",views.cust_list,name="Customers")
 ]
+

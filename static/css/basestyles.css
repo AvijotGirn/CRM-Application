@@ -1,17 +1,21 @@
-/* Basic styling for demonstration */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #14213D;
+    color: #fff; /* for the Navbar Title: Eg. Home*/
     padding: 10px 0;
     text-align: center;
 }
 nav {
-    background-color: #f4f4f4;
+    background-color: #2B3865;
     padding: 10px;
 }
 nav ul {
@@ -26,8 +30,23 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
 }
 nav ul li a:hover {
     color: #777;
+}
+
+.outer {
+    display: flex;
+    height: 100%;
+}
+
+.left-bar, .right-bar {
+    width: 50px;
+    background-color: #14213D;
+}
+
+.container {
+    padding: 0 10px;
+    flex-grow: 1;
 }

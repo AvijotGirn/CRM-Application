@@ -1,10 +1,23 @@
-{% extends "base.html" %} {% block header_title %}Customers{% endblock %}
+{% extends "base.html" %}
+{% load static %}
+{% block header_title %}Customers{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/customerstyles.css' %}" type="text/css">{% endblock %}
 {% block content %}
-<ul>
-    {% for cust in cust_list %}
-    <li>
-        {{ cust.first_name }} {{ cust.last_name }} | {{ cust.email }} | {{ cust.phone }} | {{ cust.company }}
-    </li>
-    {% endfor %}
-</ul>
+    <table>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Company</th>
+        {% for cust in cust_list %}
+            <tr class="row">
+                <td>{{ cust.first_name }}</td>
+                <td>{{ cust.last_name }}</td>
+                <td>{{ cust.email }}</td>
+                <td>{{ cust.phone}}</td>
+                <td>{{ cust.company }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

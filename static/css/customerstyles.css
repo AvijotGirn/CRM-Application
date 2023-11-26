@@ -1,0 +1,11 @@
+.container th {
+    border: 2px solid #2B3865;
+}
+
+.container .row {
+    border-bottom: 2px solid #2B3865;
+}
+
+.container table{
+    width: 100%;
+}

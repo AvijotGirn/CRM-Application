@@ -9,3 +9,6 @@ def home(request):
 def cust_list(request):
     items = Customers.objects.all()
     return render(request, "customers.html", {"cust_list": items})
+
+def cust_notes(request):
+    return render(request, "custinfo.html", {"cust": request.POST.get("hidden","")})

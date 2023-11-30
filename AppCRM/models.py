@@ -8,3 +8,4 @@ class Customers(models.Model):
     email = models.EmailField(max_length=250)
     phone = models.CharField(max_length=200)
     company = models.CharField(max_length=300)
+    notes = models.CharField(max_length=750, default="<No Available Notes>")

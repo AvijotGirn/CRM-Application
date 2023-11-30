@@ -10,13 +10,17 @@
         <th>Email</th>
         <th>Phone Number</th>
         <th>Company</th>
+        <th>Info: </th>
         {% for cust in cust_list %}
             <tr class="row">
                 <td>{{ cust.first_name }}</td>
                 <td>{{ cust.last_name }}</td>
-                <td>{{ cust.email }}</td>
+                <td><a href="mailto:{{ cust.email }}">{{ cust.email }}</a></td>
                 <td>{{ cust.phone}}</td>
                 <td>{{ cust.company }}</td>
+                <td>
+                    <a href="{% url 'Info' %}">View/Edit</a>
+                </td>
             </tr>
         {% endfor %}
     </table>

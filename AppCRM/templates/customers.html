@@ -19,7 +19,7 @@
                 <td>{{ cust.phone}}</td>
                 <td>{{ cust.company }}</td>
                 <td>
-                    <a href="{% url 'Info' %}">View/Edit</a>
+                    <a href="{% url 'Info' cust.id %}">View/Edit</a>
                 </td>
             </tr>
         {% endfor %}

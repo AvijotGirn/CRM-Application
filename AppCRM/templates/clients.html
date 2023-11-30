@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header_title %}Clients{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/clientstyles.css' %}" type="text/css">{% endblock %}
+{% block content %}
+    <table>
+        <button type="button" class="add-button"><b>Add Client</b></button>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Company</th>
+        <th>Info: </th>
+        {% for client in client_list %}
+            <tr class="row">
+                <td>{{ client.first_name }}</td>
+                <td>{{ client.last_name }}</td>
+                <td><a href="mailto:{{ client.email }}">{{ client.email }}</a></td>
+                <td>{{ client.phone}}</td>
+                <td>{{ client.company }}</td>
+                <td>
+                    <a href="{% url 'Info' client.id %}">View/Edit</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+{% endblock %}

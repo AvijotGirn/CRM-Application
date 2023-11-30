@@ -9,3 +9,8 @@
 .container table{
     width: 100%;
 }
+
+.container .add-button {
+    position: absolute;
+    margin-top: 10px;
+}

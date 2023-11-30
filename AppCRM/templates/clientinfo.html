@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header_title %}Client Information: {{ client.first_name }} {{ client.last_name }}{% endblock %}
+
+<!-- {% block css %}<link rel="stylesheet" href="{% static 'css/clientstyles.css' %}" type="text/css">{% endblock %} -->
+{% block content %}
+    <h1>ADD ADMIN PRIVILEGES</h1>
+    <p>
+    <strong>Client: </strong> {{ client.first_name }} {{ client.last_name }} from {{ client.company }} <br>
+    <strong>Contact Information: </strong> <a href="mailto:{{ client.email }}">{{ client.email }}</a> | {{ client.phone }} <br>
+    <strong>Notes: </strong> <br> &emsp; {{ client.notes }}
+    </p>
+
+{% endblock %}

@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 {% block header_title %}Home{% endblock %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/homestyles.css' %}" type="text/css"> {% endblock %}
 
 {% block content %}
-    <h4>
+    <h3>
         Welcome to the CRM Application. In this application, you can view information about any <b>Clients</b> correlated
         with your business. You will have the ability to contact the customer via email or use the provided phone
         number.
-    </h4>
+    </h3>
     <br>
     <p>
         Please contact an administrator to discuss adding, removing, or editing a Client in the list.

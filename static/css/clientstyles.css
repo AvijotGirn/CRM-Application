@@ -10,7 +10,16 @@
     width: 100%;
 }
 
-.container .add-button {
-    position: absolute;
-    margin-top: 10px;
+.button-div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add-button {
+    border: none;
+    background-color: #264b5d;
+    color: white;
+    font-size: 15px;
+    border-radius: 12px;
+    padding: 8px 20px;
 }

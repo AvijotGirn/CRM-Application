@@ -42,11 +42,14 @@ nav ul li a:hover {
 }
 
 .left-bar, .right-bar {
-    width: 50px;
+    width: 80px;
     background-color: #14213D;
 }
 
 .container {
-    padding: 0 10px;
+    padding-left: 8px;
+    padding-right: 10px;
     flex-grow: 1;
+    height: 100%;
+    width: 90%;
 }

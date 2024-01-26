@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
-{% block header_title %}Home{% endblock %}
 {% block css %} <link rel="stylesheet" href="{% static 'css/homestyles.css' %}" type="text/css"> {% endblock %}
+{% block header_title %}Home{% endblock %}
+
 
 {% block content %}
-    <h3>
-        Welcome to the CRM Application. In this application, you can view information about any <b>Clients</b> correlated
-        with your business. You will have the ability to contact the customer via email or use the provided phone
-        number.
-    </h3>
-    <br>
-    <p>
-        Please contact an administrator to discuss adding, removing, or editing a Client in the list.
-        To ensure that the process is easy, please provide the administrator with the following information
-        regarding the client:
-    </p>
+    <div class="homediv">
+        <h3>
+            Welcome to the CRM Application. In this application, you can view information about any <b>Clients</b> correlated
+            with your business. You will have the ability to contact the customer via email or use the provided phone
+            number.
+        </h3>
+        <br>
+        <p>
+            Please contact an administrator to discuss adding, removing, or editing a Client in the list.
+            To ensure that the process is easy, please provide the administrator with the following information
+            regarding the client:
+        </p>
     <p>First Name<br>Last Name<br>Email<br>Phone Number<br>Company Name</p>
+    </div>
+    
 {% endblock %}

@@ -3,7 +3,7 @@ import json
 from django.shortcuts import render, HttpResponse
 from .models import Clients
 
-# Create your views here.
+# ----------- Routing
 def home(request):
     return render(request, "home.html")
 
@@ -13,6 +13,11 @@ def client_list(request):
 
 def client_info(request, client):
     return render(request, "clientinfo.html", {"client": Clients.objects.get(id=client)})
+
+def add_client_page(request):
+    return render(request, "add_client.html")
+
+# ----------- DB Manipulation Methods
 
 def update_client_info(request, clientid):
     if request.method == 'POST':
@@ -34,3 +39,4 @@ def update_client_info(request, clientid):
         return JsonResponse({'success': 'Client information successfully updated'}, status=200)
 
     return JsonResponse({'error': 'Invalid Request Method'}, status=400)
+

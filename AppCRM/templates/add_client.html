@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/addclientstyles.css' %}" type="text/css"> {% endblock %}
+{% block header_title %}Add A New Client{% endblock %}
+
+
+{% block content %}
+    <div class="main">
+        <small class="asterisk_note">Note: * indicates a required field.</small>
+        <ul class="formfieldslist">
+            <li>
+                <label for="firstname" class="form_label">First Name *</label>
+                <br>
+                <input class="form_field" id="firstname" required>
+            </li>
+            <li>
+                <label for="lastname" class="form_label">Last Name *</label>
+                <br>
+                <input class="form_field" id="lastname" required>
+            </li>
+            <li>
+                <label for="email" class="form_label">Email *</label>
+                <br>
+                <input class="form_field" id="email" required>
+            </li>
+            <li>
+                <label for="phone" class="form_label">Phone Number *</label>
+                <br>
+                <input class="form_field" id="phone" required>
+            </li>
+            <li>
+                <label for="company" class="form_label">Company *</label>
+                <br>
+                <input class="form_field" id="company" required>
+            </li>
+            <li>
+                <label for="notes" class="form_label">Notes (Optional)</label>
+                <br>
+                <textarea class="notes_field" id="notes" placeholder="..."></textarea>
+            </li>
+        </ul>
+        <button type="button" class="submit_button">Add Client</button>
+    </div>
+{% endblock %}

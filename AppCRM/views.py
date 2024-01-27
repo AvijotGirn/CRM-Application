@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 import json
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Clients
 
 # ----------- Routing
@@ -15,7 +15,11 @@ def client_info(request, client):
     return render(request, "clientinfo.html", {"client": Clients.objects.get(id=client)})
 
 def add_client_page(request):
-    return render(request, "add_client.html")
+    if request.method == "POST":
+        add_client(request)
+        return redirect("Clients")
+    else:
+        return render(request, "add_client.html")
 
 # ----------- DB Manipulation Methods
 
@@ -39,4 +43,19 @@ def update_client_info(request, clientid):
         return JsonResponse({'success': 'Client information successfully updated'}, status=200)
 
     return JsonResponse({'error': 'Invalid Request Method'}, status=400)
+
+
+def add_client(request):
+    first_name = request.POST['first']
+    last_name = request.POST['last']
+    email = request.POST['email']
+    phone = request.POST['phone']
+    company = request.POST['company']
+    notes = request.POST['notes']
+
+    new_client = Clients(first_name=first_name, last_name=last_name, email=email, phone=phone, company=company, notes=notes)
+    new_client.save()
+    return
+
+
 

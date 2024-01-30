@@ -2,21 +2,33 @@
 {% load static %}
 {% block header_title %}Client Information: {{ client.first_name }} {{ client.last_name }}{% endblock %}
 
-{#{% block css %}<link rel="stylesheet" href="{% static 'css/clientstyles.css' %}" type="text/css">{% endblock %}#}
+{% block css %}<link rel="stylesheet" href="{% static 'css/clientinfostyles.css' %}" type="text/css">{% endblock %}
 {% block content %}
-    <h1>ADD ADMIN PRIVILEGES</h1>
     <p>
-        <strong>ID: </strong> <span id="clientID">{{ client.id }}</span> <br>
-        <strong>Client: </strong> <span id="clientFirstName" contenteditable="false">{{ client.first_name }}</span>
-                                  <span id="clientLastName" contenteditable="false">{{ client.last_name }}</span>
-        <br><strong>From: </strong><span id="companyField" contenteditable="false">{{ client.company }}</span> <br>
-        <strong>Contact Information: </strong>
-        <span id="emailField" contenteditable="false"><a href="mailto:{{ client.email }}">{{ client.email }}</a></span> |
-        <span id="phoneField" contenteditable="false">{{ client.phone }}</span> <br>
-        <strong>Notes: </strong> <br> &emsp; <span id="notesField" contenteditable="false">{{ client.notes }}</span>
+        <strong class="header">ID: </strong> 
+            <br>
+            &emsp;<span id="clientID">{{ client.id }}</span> 
+            <br>
+        <strong class="header">Client: </strong> 
+            <br>
+            &emsp;<span id="clientFirstName" contenteditable="false">{{ client.first_name }}</span>
+            <span id="clientLastName" contenteditable="false">{{ client.last_name }}</span>
+            <br>
+        <strong class="header">From: </strong>
+            <br>
+            &emsp;<span id="companyField" contenteditable="false">{{ client.company }}</span> 
+            <br>
+        <strong class="header">Contact Information: </strong>
+            <br>
+            &emsp;<span id="emailField" contenteditable="false"><a href="mailto:{{ client.email }}">{{ client.email }}</a></span> |
+            <span id="phoneField" contenteditable="false">{{ client.phone }}</span> 
+            <br>
+        <strong class="header">Notes: </strong> 
+            <br> &emsp; 
+            <span id="notesField" contenteditable="false">{{ client.notes }}</span>
     </p>
 
-    <button>Edit Fields</button>
+    <button class="but">Edit Fields</button>
 
 {% endblock %}
 {% block js %} <script src="{% static "js/clientinfo.js" %}"></script> {% endblock %}

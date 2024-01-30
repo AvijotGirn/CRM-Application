@@ -28,7 +28,9 @@
                 <td>{{ client.phone}}</td>
                 <td>{{ client.company }}</td>
                 <td>
-                    <a href="{% url 'Info' client.id %}">View/Edit</a>
+                    <form action="{% url 'Info' client.id %}">
+                        <button>View</button>
+                    </form>
                 </td>
             </tr>
         {% endfor %}

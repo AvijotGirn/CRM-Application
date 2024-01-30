@@ -13,8 +13,11 @@
 
 .notes_field {
     resize: none;
-    width: 95%;
+    padding-bottom: 0;
+    width: 90%;
     height: 80px;
+    border-radius: 10px;
+    border-style: dashed;
 }
 
 .left-bar, .right-bar {
@@ -30,7 +33,9 @@
     font-size: 18px;
     border-style: solid;
     width: 60%;
-    margin: auto;
+    margin: 25px auto;
+    border-radius: 20px;
+    background-color: white;
 }
 
 .formfieldslist {
@@ -47,4 +52,17 @@ li {
     color: red;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.submit-button {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #2B3865;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #5b80b2;
 }

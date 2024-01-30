@@ -5,6 +5,8 @@
 
 
 {% block content %}
+    <br>
+
     <div class="main">
         <small class="asterisk_note">Note: * indicates a required field.</small>
         <form action="" method="POST"> {% csrf_token %}
@@ -22,12 +24,12 @@
                 <li>
                     <label for="email" class="form_label">Email *</label>
                     <br>
-                    <input class="form_field" id="email" name="email" required>
+                    <input type="email" class="form_field" id="email" name="email" required>
                 </li>
                 <li>
                     <label for="phone" class="form_label">Phone Number *</label>
                     <br>
-                    <input class="form_field" id="phone" name="phone" required>
+                    <input type="tel" class="form_field" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 </li>
                 <li>
                     <label for="company" class="form_label">Company *</label>
@@ -40,7 +42,7 @@
                     <textarea class="notes_field" id="notes" placeholder="..." name="notes" ></textarea>
                 </li>
             </ul>
-            <button type="submit" class="submit_button">Add Client</button>
+            <button type="submit" class="submit-button">Add Client</button>
         </form>
     </div>
 {% endblock %}

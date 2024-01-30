@@ -1,0 +1,14 @@
+.header{
+    font-size: 22px;
+}
+
+.but{
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #2B3865;
+    color: white;
+}
+
+.but:hover{
+    background-color: #5b80b2;
+}

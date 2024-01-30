@@ -44,8 +44,9 @@ def update_client_info(request, clientid):
 
     return JsonResponse({'error': 'Invalid Request Method'}, status=400)
 
-
+# Postman
 def add_client(request):
+
     first_name = request.POST['first']
     last_name = request.POST['last']
     email = request.POST['email']

@@ -28,3 +28,22 @@
 .add-button:hover{
     background-color: #5b80b2;
 }
+
+.del-row {
+    outline: none;
+}
+
+.del-head {
+    outline: none;
+    border: #006b1b;
+}
+
+.delete-btn {
+    background-color: red;
+    color: black;
+}
+
+.delete-btn:hover {
+    color: white;
+    background-color: #ba2121;
+}
